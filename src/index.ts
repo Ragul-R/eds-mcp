@@ -3,12 +3,17 @@ import express from "express";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { SSEServerTransport } from "@modelcontextprotocol/sdk/server/sse.js";
 import { z } from "zod";
-import axios from "axios";
 import { promises as fs } from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+
+// These two lines are needed in ES modules to get __dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Create an MCP server
 const server = new McpServer({
-  name: "web-content-extractor",
+  name: "eds-mcp",
   version: "1.0.0"
 });
 
@@ -19,7 +24,8 @@ server.tool(
   async ({ componentName }) => {
     console.log(`getting props for: ${componentName}`);
     try {
-      const propsContent = await readPropsFile();
+      const propsPath = path.resolve(__dirname, "../assets/props.json");
+      const propsContent = await fs.readFile(propsPath, "utf8");
       return {
         content: [{ type: "text", text: propsContent }]
       };
