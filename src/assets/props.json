@@ -1,0 +1,120 @@
+{
+  "title": "Button",
+  "parentDocLink": "button",
+  "props": [
+    {
+      "name": "iconStart",
+      "type": "(props: IconProps) => React.ReactNode",
+      "default": "undefined",
+      "description": "The icon to display before the button's children."
+    },
+    {
+      "name": "iconEnd",
+      "type": "(props: IconProps) => React.ReactNode",
+      "default": "undefined",
+      "description": "The icon to display after the button's children."
+    },
+    {
+      "name": "isDisabled",
+      "type": "boolean",
+      "default": "false",
+      "description": "When true, the button will be announced as disabled to screen-readers only."
+    },
+    {
+      "name": "isLoading",
+      "type": "boolean",
+      "default": "false",
+      "description": "When true, the button will display a loading indicator."
+    },
+    {
+      "name": "isPressed",
+      "type": "boolean",
+      "default": "false",
+      "description": "When true, the button will have aria-pressed set and be styled visually pressed."
+    },
+    {
+      "name": "loadingLabel",
+      "type": "string",
+      "default": "undefined",
+      "description": "Text to read out to assistive technologies when button is loading."
+    },
+    {
+      "name": "size",
+      "type": "'large' | 'standard' | 'small'",
+      "default": "'standard'",
+      "description": "The size of the button."
+    },
+    {
+      "name": "variant",
+      "type": "'accentPrimary' | 'accentSecondary' | 'criticalPrimary' | 'criticalTertiary' | 'neutralPrimary' | 'neutralSecondary' | 'neutralSecondaryIntense' | 'neutralTertiary'",
+      "default": "'neutralPrimary'",
+      "description": "The variant of the button."
+    },
+    {
+      "name": "aria-controls",
+      "type": "string",
+      "default": "undefined",
+      "description": "Identifies the element (or elements) whose contents or presence are controlled by the button."
+    },
+    {
+      "name": "aria-expanded",
+      "type": "boolean",
+      "default": "undefined",
+      "description": "Indicates whether the button, or another grouping element it controls, is currently expanded or collapsed."
+    },
+    {
+      "name": "aria-haspopup",
+      "type": "boolean | 'menu' | 'listbox' | 'tree' | 'grid' | 'dialog'",
+      "default": "undefined",
+      "description": "Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by the button."
+    },
+    {
+      "name": "children",
+      "type": "React.ReactNode",
+      "default": "undefined",
+      "description": "The content of the button."
+    },
+    {
+      "name": "form",
+      "type": "string",
+      "default": "undefined",
+      "description": "Associates the button with a form element."
+    },
+    {
+      "name": "id",
+      "type": "string",
+      "default": "undefined",
+      "description": "The id of the button element."
+    },
+    {
+      "name": "onBlur",
+      "type": "(event: React.FocusEvent<HTMLButtonElement>) => void",
+      "default": "undefined",
+      "description": "Handler for blur events."
+    },
+    {
+      "name": "onClick",
+      "type": "(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void",
+      "default": "undefined",
+      "description": "Handler for click events."
+    },
+    {
+      "name": "onFocus",
+      "type": "(event: React.FocusEvent<HTMLButtonElement>) => void",
+      "default": "undefined",
+      "description": "Handler for focus events."
+    },
+    {
+      "name": "onKeyDown",
+      "type": "(event: React.KeyboardEvent<HTMLButtonElement>) => void",
+      "default": "undefined",
+      "description": "Handler for key down events."
+    },
+    {
+      "name": "type",
+      "type": "'button' | 'submit' | 'reset'",
+      "default": "'button'",
+      "description": "The type of the button."
+    }
+  ]
+}
